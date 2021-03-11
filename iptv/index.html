@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css"> 
+.lagu{ background:transparent; border:3px solid white; text-shadow:0px 0px 5px blue; border-radius:13px; font-family:Share Tech Mono; color:blue; font-size:18x; font-weight:bold; padding:3px 29px; text-decoration:none; text-shadow:0px 0px 20px red; } 
+.listv{ background:transparent; border:3px solid white; text-shadow:0px 0px 5px blue; border-radius:13px; font-family:Share Tech Mono; color:blue; font-size:18x; font-weight:bold; padding:3px 29px; text-decoration:none; text-shadow:0px 0px 20px red; } 
+</style> 
+<style>
+#panel, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+}
+
+#panel {
+  display: none;
+  text-align: right;
+}
+#panel2, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+}
+
+#panel2 {
+  display: none;
+  text-align: right;
+}
+
+butangClose {
+  position: absolute;
+  padding-top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Lato", sans-serif;
+  height: 500vh;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+#main {
+  position: absolute;
+  transition: margin-left 0.5s;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.nav {
+  background: none;
+  color: black;
+}
+.navHeader {
+  display: inline;
+}
+</style>
+</head>
+<body>
+
+<article>
+ <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+<p class="listv" onclick="bukak()"><font face="Orbitron" size="5" color="#ffcbe">Warna HD</font></p>
+<p class="listv" onclick="bukak2()"><font face="Orbitron" size="5" color="#ffcbe">Citra HD</font></p>
+
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <div id="main">
+    <div class="nav">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <p class="navHeader"> MYTV </p>
+    </div>
+  </div>
+</article>
+
+<section>
+
+<div id="panel">
+
+<div class="butangClose">
+<button class="lagu" onclick="tutup()"><font face="Orbitron" size="5" color="White">Tutup</font></button>
+</div>
+
+
+
+<video preload="auto"
+    width="415"
+    height="280"
+    poster="http://netflix.30day.xyz/cute.gif.png" 
+    controls>
+  <source src="http://ookla.mschosting.com.live.mytv.wix.my.id:8888/live/iptvlink/bola/45.m3u8" type="video/mp4">
+ 
+</video> 
+  
+
+
+</div>
+
+
+<div id="panel2">
+
+<div class="butangClose">
+<button class="lagu" onclick="tutup()"><font face="Orbitron" size="5" color="White">Tutup</font></button>
+</div>
+
+
+
+<video preload="auto"
+    width="415"
+    height="280"
+    poster="http://netflix.30day.xyz/cute.gif.png" 
+    controls>
+  <source src="http://ookla.mschosting.com.live.mytv.wix.my.id:8888/live/iptvlink/bola/49.m3u8" type="video/mp4">
+ 
+</video> 
+  
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+function bukak() {
+
+document.getElementById("panel").style.display = "block";
+document.getElementById("panel2").style.display = "none";
+}
+
+function tutup() {
+  document.getElementById("panel").style.display = "none";
+}
+</script>
+
+
+
+<script>
+{
+document.getElementById("panel2").style.display = "none";
+}
+function bukak2() {
+
+document.getElementById("panel").style.display = "none";
+document.getElementById("panel2").style.display = "block";
+}
+
+function tutup() {
+  document.getElementById("panel").style.display = "none";
+}
+</script>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
+<script src="script.js"></script>
+    <div style="display: none;"><img style="-webkit-user-select: none;margin: auto;" src="https://view.adjust.com/impression/lw5ap4r?campaign=shared_code_playground&engagement_type=fallback_click&fallback=https%3A%2F%2Fgetmimo.com"></div>
+        <a id="mimo-install-banner" href="https://app.adjust.com/lw5ap4r?campaign=shared_code_playground&engagement_type=fallback_click&fallback=https%3A%2F%2Fgetmimo.com" target="_blank"
+            /><div style="display: none;"/>
+
+</body>
+</html>
